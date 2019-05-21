@@ -24,4 +24,13 @@ List.prototype.pop = function() {
   return returnValue;
 };
 
+/**
+* Remove
+*
+*/
+List.prototype.shift = function() {
+  let 
+}
+
+
 module.exports = List;

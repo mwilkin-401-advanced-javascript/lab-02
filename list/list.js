@@ -28,6 +28,9 @@ class List {
     return returnValue;
   }
 
+  // shift() {
+    
+  // }
 }
 
 module.exports = List;

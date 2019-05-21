@@ -9,6 +9,10 @@ travis
 
 ### Documentation
 
+Dependencies
+jest
+lint
+
 Modules
 modulename.js
 Exported Values and Methods
