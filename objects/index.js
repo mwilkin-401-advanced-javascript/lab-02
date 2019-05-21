@@ -21,8 +21,8 @@ console.log(triumph.name, triumph.drive(), triumph.wheelie(), triumph.stop());
 
 // Implement a car and motorcycle using a Factory
 
-const porsche = new VehicleFactory.Car('911');
+const porsche = new VehicleFactory.CarFactory('911');
 console.log(porsche.name, porsche.drive(), porsche.stop());
 
-const ktm = new VehicleFactory.Motorcycle('450 SX-F');
+const ktm = new VehicleFactory.MotorcycleFactory('450 SX-F');
 console.log(ktm.name, ktm.drive(), ktm.wheelie(), ktm.stop());
