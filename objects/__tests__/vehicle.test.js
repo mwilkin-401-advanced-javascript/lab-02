@@ -2,9 +2,10 @@
 
 const VehicleConstructor = require('../vehicle-constructor.js');
 const VehicleClass = require('../vehicle-class.js');
+const VehicleFactory = require('../vehicle-factory.js');
 
 
-let types = ['Constructor', 'Class'];
+let types = ['Constructor', 'Class', 'Factory'];
 
 describe('Vehicles', () => {
 
@@ -16,6 +17,8 @@ describe('Vehicles', () => {
           return new VehicleConstructor.Car('foo');
         case 'Class':
           return new VehicleClass.Car('foo');
+        case 'Factory':
+          return new VehicleFactory.CarFactory('foo');
         default:
           return {};
       }
@@ -51,7 +54,9 @@ describe('Vehicles', () => {
         case 'Constructor':
           return new VehicleConstructor.Motorcycle('foo');
         case 'Class':
-        return new VehicleClass.Motorcycle('foo');
+          return new VehicleClass.Motorcycle('foo');
+        case 'Factory':
+          return new VehicleFactory.MotorcycleFactory('foo');
         default:
           return {};
       }
