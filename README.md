@@ -1,7 +1,7 @@
 # Lab-02
 ## Class 02: Classes, Inheritance, Functional Programming
 
-### Author: Matt wilkin
+### Author: Matt Wilkin
 
 ### Links and Resources
 submission PR
