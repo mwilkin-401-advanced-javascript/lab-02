@@ -18,6 +18,4 @@ console.log(fordTruck.name, fordTruck.drive(), fordTruck.stop());
 const triumph = new VehicleClass.Motorcycle('Rocket 3');
 console.log(triumph.name, triumph.drive(), triumph.stop());
 
-
-
 // Implement a car and motorcycle using a Factory
