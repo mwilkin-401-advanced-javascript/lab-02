@@ -28,16 +28,8 @@ How do you run tests?
 What assertions were made?
 What assertions need to be / should be made?
 
-
-
-
-
-
-
-
-
-
-
+_________________
+_________________
 
 ### Before you begin
 Refer to Getting Started in the lab submission instructions for complete setup instructions
