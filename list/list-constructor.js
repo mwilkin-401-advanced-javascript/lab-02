@@ -43,7 +43,7 @@ List.prototype.unshift = function(item) {
     this.data[i] = this.data[i-1]; 
   }
   this.data[0] = item;
-  this.length++
+  this.length++;
   return this.length;
 };
 

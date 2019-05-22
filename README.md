@@ -15,7 +15,19 @@ jest
 lint
 
 Modules
-modulename.js
+vehicle-class.js
+vehicle-constructor.js
+vehicle-factory.js
+
+car(name) -> Object
+motorcycle(name) -> Object
+
+let car = new Car('shelby');
+//output: {name: 'shelby'}
+
+list-constructor.js
+list() -> array method
+
 Exported Values and Methods
 foo(thing) -> string
 Usage Notes or examples
