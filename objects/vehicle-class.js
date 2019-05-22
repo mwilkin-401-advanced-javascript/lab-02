@@ -24,7 +24,7 @@ class Motorcycle extends Vehicle {
     super(name, 2);
   }
   wheelie() {
-    return 'Whee!'
+    return 'Whee!';
   }
 }
 
