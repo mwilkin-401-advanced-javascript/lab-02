@@ -15,6 +15,7 @@ class List {
    */
   push(item) {
     // Add an item to the end
+    if(!item) throw Error ('no item provided');
     try {
       this.data[this.length] = item;
       this.length++;
