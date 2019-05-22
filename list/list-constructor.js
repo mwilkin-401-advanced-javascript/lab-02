@@ -25,12 +25,30 @@ List.prototype.pop = function() {
 };
 
 /**
-* Remove
+* 
 *
 */
 List.prototype.shift = function() {
-  let 
+  let returnValue = this.data[this.length];
+  delete this.data[0];
+  this.data[0] = this.data[1];
+  this.length--;
+  return returnValue;
 }
 
+List.prototype.unshift = function(item) {
+  for (let i = this.length; i > 0; i--){
+  this.data[i] = this.data[i-1]; 
+  }
+  this.data[0] = item;
+  this.length++
+  return this.length;
+}
+
+List.prototype.foreach = function(callback) {
+  for(let i = 0; i < this.length; i++){
+    this.data[i] = callback(this.data[i]);
+  }
+};
 
 module.exports = List;

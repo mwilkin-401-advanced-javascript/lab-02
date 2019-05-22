@@ -28,9 +28,13 @@ class List {
     return returnValue;
   }
 
-  // shift() {
-    
-  // }
+  shift() {
+    let returnValue = this.data[this.length];
+    delete this.data[0];
+    this.data[0] = this.data[1];
+    this.length--;
+    return returnValue;
+  }
 }
 
 module.exports = List;
