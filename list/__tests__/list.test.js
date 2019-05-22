@@ -47,4 +47,17 @@ describe('List Data Structure', () => {
     expect(stuff.length).toEqual(4);
     expect(stuff.data[0]).toEqual('d');
   });
+
+  it('should go touch  each item of the data set', () => {
+    let stuff = new List();
+      stuff.push('2');
+      stuff.push('5');
+      stuff.push('3');
+      stuff.forEach((element) => {
+        return element * 2;
+      });
+      expect(stuff.length).toEqual(3);
+      expect(stuff.data[1]).toEqual(10);
+  });
+
 });

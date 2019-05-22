@@ -45,7 +45,7 @@ List.prototype.unshift = function(item) {
   return this.length;
 }
 
-List.prototype.foreach = function(callback) {
+List.prototype.forEach = function(callback) {
   for(let i = 0; i < this.length; i++){
     this.data[i] = callback(this.data[i]);
   }
