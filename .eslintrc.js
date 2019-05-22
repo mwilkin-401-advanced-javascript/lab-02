@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
     "browser": true,
     "node": true,
@@ -22,4 +22,4 @@
     "semi": [ "error", "always" ],
     "no-unused-vars": [1, {"vars": "local", "args": "none"}]
   }
-}
+};
