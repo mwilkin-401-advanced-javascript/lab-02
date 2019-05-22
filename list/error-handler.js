@@ -7,7 +7,6 @@ class Bug extends Error {
     this.cause = cause
     this.level = level
     this.timestamp = timestamp
-    console.log(this);
   }
 }
 

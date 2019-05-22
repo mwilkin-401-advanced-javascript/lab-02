@@ -1,5 +1,7 @@
 'use strict';
 
+const errorHandler = require('./error-handler.js');
+
 class List {
 
   constructor() {
@@ -13,8 +15,24 @@ class List {
    */
   push(item) {
     // Add an item to the end
-    this.data[this.length] = item;
-    this.length++;
+    try {
+      this.data[this.length] = item;
+      this.length++;
+    }
+    catch(e) {
+      let error = {
+        timestamp: new Date(),
+        severity: 3,
+        reason: 'Something went wrong',
+        timestamp: new Date(),
+        message: e.message,
+        file: e.file,
+        position: e.column,
+        stack: e.stack,
+      };
+      errorHandler.dealWith(error);
+    }
+
   }
 
   /**
