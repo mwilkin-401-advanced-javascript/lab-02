@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/mwilkin-401-advanced-javascript/lab-02#readme",
   "dependencies": {
-    "eslint": "^5.16.0",
     "jest": "^24.8.0",
     "lint": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
   }
 }
