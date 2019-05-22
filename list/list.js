@@ -29,12 +29,30 @@ class List {
   }
 
   shift() {
-    let returnValue = this.data[this.length];
+    let returnValue = this.data[0];
     delete this.data[0];
-    this.data[0] = this.data[1];
+    for(let i = 0; i < this.length; i++){
+    this.data[i] = this.data[i+1];
+    }
     this.length--;
     return returnValue;
   }
+
+  unshift(item) {
+    for(let i = this.length; i > 0; i--){
+      this.data[i] = this.data[i-1];
+    }
+    this.data[0] = item;
+    this.length++;
+    return this.length;
+  }
+
+  forEach(callback) {
+    for(let i = 0; i < this.length; i++){
+      this.data[i] = callback(this.data[i]);
+    }
+  }
+
 }
 
 module.exports = List;
