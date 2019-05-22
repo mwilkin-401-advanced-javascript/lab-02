@@ -40,34 +40,95 @@ class List {
    * @returns {*}
    */
   pop() {
-    let returnValue = this.data[this.length];
-    delete this.data[this.length];
-    this.length--;
-    return returnValue;
+    try{
+      let returnValue = this.data[this.length];
+      delete this.data[this.length];
+      this.length--;
+      return returnValue;
+    }
+    catch(e) {
+      let error = {
+        timestamp: new Date(),
+        severity: 3,
+        reason: 'Something went wrong',
+        timestamp: new Date(),
+        message: e.message,
+        file: e.file,
+        position: e.column,
+        stack: e.stack,
+      };
+      errorHandler.dealWith(error);
+    }
+
   }
 
   shift() {
-    let returnValue = this.data[0];
-    delete this.data[0];
-    for(let i = 0; i < this.length; i++){
-    this.data[i] = this.data[i+1];
+    try {
+      let returnValue = this.data[0];
+      delete this.data[0];
+      for(let i = 0; i < this.length; i++){
+      this.data[i] = this.data[i+1];
+      }
+      this.length--;
+      return returnValue;
     }
-    this.length--;
-    return returnValue;
+    catch(e) {
+      let error = {
+        timestamp: new Date(),
+        severity: 3,
+        reason: 'Something went wrong',
+        timestamp: new Date(),
+        message: e.message,
+        file: e.file,
+        position: e.column,
+        stack: e.stack,
+      };
+      errorHandler.dealWith(error);
+    }
   }
 
   unshift(item) {
-    for(let i = this.length; i > 0; i--){
-      this.data[i] = this.data[i-1];
+    try {
+      for(let i = this.length; i > 0; i--){
+        this.data[i] = this.data[i-1];
+      }
+      this.data[0] = item;
+      this.length++;
+      return this.length;
     }
-    this.data[0] = item;
-    this.length++;
-    return this.length;
+    catch(e) {
+      let error = {
+        timestamp: new Date(),
+        severity: 3,
+        reason: 'Something went wrong',
+        timestamp: new Date(),
+        message: e.message,
+        file: e.file,
+        position: e.column,
+        stack: e.stack,
+      };
+      errorHandler.dealWith(error);
+    }
   }
 
   forEach(callback) {
-    for(let i = 0; i < this.length; i++){
-      this.data[i] = callback(this.data[i]);
+    try{
+      for(let i = 0; i < this.length; i++){
+        this.data[i] = callback(this.data[i]);
+      }
+    }
+    catch(e) {
+      let error = {
+        timestamp: new Date(),
+        severity: 3,
+        reason: 'Something went wrong',
+        timestamp: new Date(),
+        message: e.message,
+        file: e.file,
+        position: e.column,
+        stack: e.stack,
+      };
+      errorHandler.dealWith(error);
     }
   }
 
