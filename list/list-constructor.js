@@ -1,6 +1,6 @@
 'use strict';
 
-const errorHandler = require('./error-handler.js');
+// const errorHandler = require('./error-handler.js');
 
 function List() {
   this.length = 0;
