@@ -1,6 +1,8 @@
 # Lab-02
 ## Class 02: Classes, Inheritance, Functional Programming
 
+[![Build Status](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-02.svg?branch=master)](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-02)
+
 ### Author: Matt Wilkin
 
 ### Links and Resources
