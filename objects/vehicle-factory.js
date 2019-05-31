@@ -13,25 +13,25 @@ const Vehicle = () => ({
 });
 
 function CarFactory(name, wheels) {
-  let car = Object.assign(
+  let Car = Object.assign(
     {name},
-    {wheels: 4},
+    {wheels},
     Vehicle()
   );
-  return Object.freeze(car);
+  return Object.freeze(Car);
 }
 
 function MotorcycleFactory(name, wheels){
-  let moto = Object.assign(
+  let Motorcycle = Object.assign(
     {name},
-    {wheels: 2},
+    {wheels},
     {wheelie},
     Vehicle()
   );
   function wheelie() { 
     return 'Whee!';}
 
-  return Object.freeze(moto);
+  return Object.freeze(Motorcycle);
 }
 
 module.exports = {CarFactory, MotorcycleFactory};

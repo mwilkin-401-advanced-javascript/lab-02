@@ -15,13 +15,13 @@ class Vehicle {
 
 class Car extends Vehicle {
   constructor(name, wheels){
-    super(name, 4);
+    super(name, wheels);
   }
 }
 
 class Motorcycle extends Vehicle {
   constructor(name, wheels){
-    super(name, 2);
+    super(name, wheels);
   }
   wheelie() {
     return 'Whee!';
