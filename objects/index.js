@@ -13,16 +13,16 @@ console.log(harley.name, harley.drive(), harley.wheelie(), harley.stop());
 
 // Implement a car and motorcycle using a Class
 
-const fordTruck = new VehicleClass.Car('F350');
+const fordTruck = new VehicleClass.Car('F350', 4);
 console.log(fordTruck.name, fordTruck.drive(), fordTruck.stop());
 
-const triumph = new VehicleClass.Motorcycle('Rocket 3');
+const triumph = new VehicleClass.Motorcycle('Rocket 3', 2);
 console.log(triumph.name, triumph.drive(), triumph.wheelie(), triumph.stop());
 
 // Implement a car and motorcycle using a Factory
 
-const porsche = new VehicleFactory.CarFactory('911');
+const porsche = new VehicleFactory.CarFactory('911', 4);
 console.log(porsche.name, porsche.drive(), porsche.stop());
 
-const ktm = new VehicleFactory.MotorcycleFactory('450 SX-F');
+const ktm = new VehicleFactory.MotorcycleFactory('450 SX-F', 2);
 console.log(ktm.name, ktm.drive(), ktm.wheelie(), ktm.stop());
